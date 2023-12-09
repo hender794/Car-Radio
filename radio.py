@@ -173,14 +173,11 @@ class Radio(QMainWindow, Ui_MainWindow):
                 self.usb()
         elif self.mode == 3:
             self.check_ff()
-            print(self.check_ff())
             if self.check_ff() == 'yes':
                 if self.songs_cd == 1 or self.songs_cd == 0:
-                    print('cd')
                     self.songs_cd = self.songs_cd + 1
                     self.cd()
                 else:
-                    print('cd1')
                     self.songs_cd = 0
                     self.cd()
             else:
@@ -195,40 +192,32 @@ class Radio(QMainWindow, Ui_MainWindow):
         """
         if self.mode == 0:
             if self.songs_bluetooth == 1 or self.songs_bluetooth == 2:
-                print('blue')
                 self.songs_bluetooth = self.songs_bluetooth - 1
                 self.bluetooth()
             else:
-                print('blue1')
                 self.songs_bluetooth = 2
                 self.bluetooth()
         elif self.mode == 1:
             if self.songs_aux == 1 or self.songs_aux == 2:
-                print('aux')
                 self.songs_aux = self.songs_aux - 1
                 self.aux()
             else:
-                print('aux1')
                 self.songs_aux = 2
                 self.aux()
         elif self.mode == 2:
             if self.songs_usb == 1 or self.songs_usb == 2:
-                print('usb')
                 self.songs_usb = self.songs_usb - 1
                 self.usb()
             else:
-                print('usb1')
                 self.songs_usb = 2
                 self.usb()
         elif self.mode == 3:
             self.check_rw()
             if self.check_rw() == 'yes':
                 if self.songs_cd == 1 or self.songs_cd == 2:
-                    print('cd')
                     self.songs_cd = self.songs_cd - 1
                     self.cd()
                 else:
-                    print('cd1')
                     self.songs_cd = 2
                     self.cd()
             else:
