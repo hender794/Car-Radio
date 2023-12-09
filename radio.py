@@ -40,7 +40,7 @@ class Radio(QMainWindow, Ui_MainWindow):
         Method to turn on and off the car radio
         """
         if self.button_power.isChecked():
-            self.label_big.setText('Please select a listening self.mode')
+            self.label_big.setText('Please select a listening mode')
             self.button_94.setChecked(True)
             self.label_picture.show()
             self.label_picture.setStyleSheet("border-image : url(home.png);")
@@ -61,18 +61,18 @@ class Radio(QMainWindow, Ui_MainWindow):
             self.label_picture.setStyleSheet('')
             self.label.setText('')
 
-    def reset(self) -> None:
+    # def reset(self) -> None:
         """
         Method to help the function go back to a common point without restarting
         """
-        self.button_fm.clicked.connect(lambda: self.fm())
-        self.button_bluetooth.clicked.connect(lambda: self.bluetooth())
-        self.button_aux.clicked.connect(lambda: self.check_aux())
-        self.button_usb.clicked.connect(lambda: self.check_usb())
-        self.button_cd.clicked.connect(lambda: self.check_cd())
-        self.button_vol.clicked.connect(lambda: self.vol())
-        self.button_ff.clicked.connect(lambda: self.ff())
-        self.button_rw.clicked.connect(lambda: self.rw())
+        # self.button_fm.clicked.connect(lambda: self.fm())
+        # self.button_bluetooth.clicked.connect(lambda: self.bluetooth())
+        # self.button_aux.clicked.connect(lambda: self.check_aux())
+        # self.button_usb.clicked.connect(lambda: self.check_usb())
+        # self.button_cd.clicked.connect(lambda: self.check_cd())
+        # self.button_vol.clicked.connect(lambda: self.vol())
+        # self.button_ff.clicked.connect(lambda: self.ff())
+        # self.button_rw.clicked.connect(lambda: self.rw())
 
     def fm(self) -> None:
         """
@@ -368,7 +368,6 @@ class Radio(QMainWindow, Ui_MainWindow):
             self.label_album.setText('')
             self.label_artist.setText('')
             self.label_big.setText(f'Please insert CD')
-            self.reset()
 
     def vol(self) -> None:
         """
